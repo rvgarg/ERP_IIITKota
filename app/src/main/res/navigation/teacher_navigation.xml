@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/teacher_navigation"
+    app:startDestination="@+id/home">
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.erp.fragments.TeacherHome"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_teacher_home" />
+    <fragment
+        android:id="@+id/nav_assignment"
+        android:name="com.example.erp.fragments.AssignmentsFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_assignments" />
+
+    <fragment
+        android:id="@+id/nav_events"
+        android:name="com.example.erp.fragments.EventsFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_events" />
+
+    <fragment
+        android:id="@+id/nav_professors"
+        android:name="com.example.erp.fragments.ProfessorsFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_professors" />
+
+    <fragment
+        android:id="@+id/nav_announcements"
+        android:name="com.example.erp.fragments.AnnouncementsFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_announcements" />
+
+    <fragment
+        android:id="@+id/nav_create_announcement"
+        android:name="com.example.erp.fragments.CreateAnnouncementsFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_create_announcement" />
+    <fragment
+        android:id="@+id/nav_create_assignment"
+        android:name="com.example.erp.fragments.CreateAssignment"
+        android:label="@string/menu_create_assignment"
+        tools:layout="@layout/fragment_create_assignment" />
+    <fragment
+        android:id="@+id/nav_create_event"
+        android:name="com.example.erp.fragments.CreateEvent"
+        android:label="@string/menu_create_event"
+        tools:layout="@layout/fragment_create_event" />
+    <fragment
+        android:id="@+id/nav_mark_attendance"
+        android:name="com.example.erp.fragments.MarkAttendance"
+        android:label="@string/menu_mark_attendance"
+        tools:layout="@layout/fragment_mark_attendance" />
+</navigation>
