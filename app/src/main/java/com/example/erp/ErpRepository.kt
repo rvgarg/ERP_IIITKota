@@ -28,7 +28,7 @@ class ErpRepository(application: Application) {
 
     fun studentInsert(student: Student) = erpDao.studentInsert(student)
 
-    fun teacherInsert(teacherObj: TeacherObj) = erpDao.teacherInsert(teacherObj)
+    fun teacherInsert(professor: Professor) = erpDao.teacherInsert(professor)
 
     fun loginStudent(loginId: String, password: String) =
         erpDao.loginStudent(loginId, password)
@@ -71,7 +71,7 @@ class ErpRepository(application: Application) {
 
     fun getCourses(courseId: String) = erpDao.getCourses(courseId)
 
-    fun getCourses(courseIds: List<String>) = erpDao.getCourses(courseIds)
+    fun getCourses(courseIds: ArrayList<String>) = erpDao.getCourses(courseIds)
 
     fun getBooks() = erpDao.getBooks()
 
@@ -82,4 +82,6 @@ class ErpRepository(application: Application) {
     fun getIssuedBooks() = erpDao.getIssuedBooks()
 
     fun getIssuedBooks(studentId: String) = erpDao.getIssuedBooks(studentId)
+
+    fun getTeachers() = erpDao.getTeachers()
 }

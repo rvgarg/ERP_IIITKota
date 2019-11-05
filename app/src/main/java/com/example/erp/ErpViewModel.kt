@@ -23,7 +23,7 @@ class ErpViewModel(application: Application) : AndroidViewModel(application) {
 
     fun studentInsert(student: Student) = erpRepository.studentInsert(student)
 
-    fun teacherInsert(teacherObj: TeacherObj) = erpRepository.teacherInsert(teacherObj)
+    fun teacherInsert(professor: Professor) = erpRepository.teacherInsert(professor)
 
     fun loginStudent(loginId: String, password: String) =
         erpRepository.loginStudent(loginId, password)
@@ -63,7 +63,7 @@ class ErpViewModel(application: Application) : AndroidViewModel(application) {
 
     fun getCourses(courseId: String) = erpRepository.getCourses(courseId)
 
-    fun getCourses(courseIds: List<String>) = erpRepository.getCourses(courseIds)
+    fun getCourses(courseIds: ArrayList<String>) = erpRepository.getCourses(courseIds)
 
     fun getBooks() = erpRepository.getBooks()
 
@@ -74,4 +74,6 @@ class ErpViewModel(application: Application) : AndroidViewModel(application) {
     fun getIssuedBooks() = erpRepository.getIssuedBooks()
 
     fun getIssuedBooks(studentId: String) = erpRepository.getIssuedBooks(studentId)
+
+    fun getTeachers() = erpRepository.getTeachers()
 }

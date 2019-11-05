@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity() {
                             if (lg.name.isEmpty()) {
                                 error.text = "Invalid Credentials!!"
                             } else {
-                                application.startActivity(
+                                startActivity(
                                     Intent(
                                         application,
-                                        TeacherActivity::class.java
+                                        ProfessorActivity::class.java
                                     )
                                 )
                                 finish()
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                             if (lg.name.isEmpty()) {
                                 error.text = "Invalid Credentials!!"
                             } else {
-                                application.startActivity(
+                                startActivity(
                                     Intent(
                                         application,
                                         StudentActivity::class.java
@@ -53,8 +53,26 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-            val route = Intent(this, StudentActivity::class.java)
-            startActivity(route)
+        }
+        register.setOnClickListener {
+            when (Role) {
+                "Staff" -> {
+                    startActivity(
+                        Intent(
+                            application,
+                            ProfessorRegActivity::class.java
+                        )
+                    )
+                }
+                "Student" -> {
+                    startActivity(
+                        Intent(
+                            application,
+                            StudentRegActivity::class.java
+                        )
+                    )
+                }
+            }
         }
         staff.setOnClickListener {
             Role = "Staff"

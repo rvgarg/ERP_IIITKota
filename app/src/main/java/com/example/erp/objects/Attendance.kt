@@ -26,7 +26,6 @@ class Attendance(
     @ColumnInfo(name = "date")
     val date: Long
 ) {
-
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     var id: Int = 0

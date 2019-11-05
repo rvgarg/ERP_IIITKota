@@ -10,7 +10,7 @@ class Courses(
     @ColumnInfo(name = "courseId")
     val cId: String,
     @ForeignKey(
-        entity = TeacherObj::class,
+        entity = Professor::class,
         parentColumns = ["id"],
         childColumns = ["id"]
     )

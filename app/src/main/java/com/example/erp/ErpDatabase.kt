@@ -7,7 +7,8 @@ import androidx.room.RoomDatabase
 import com.example.erp.objects.*
 
 @Database(
-    entities = [AnnouncementObj::class, Assignments::class, Attendance::class, Books::class, BooksIsued::class, Courses::class, EventObj::class, Student::class, TeacherObj::class], version = 1
+    entities = [AnnouncementObj::class, Assignments::class, Attendance::class, Books::class, BooksIsued::class, Courses::class, EventObj::class, Student::class, Professor::class],
+    version = 1
 )
 abstract class ErpDatabase : RoomDatabase() {
     companion object {

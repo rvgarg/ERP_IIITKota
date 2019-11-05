@@ -16,7 +16,7 @@ class BooksIsued(
     val bookId: Int,
     @ForeignKey(
         entity = Student::class,
-        childColumns = ["stydentId"],
+        childColumns = ["studentId"],
         parentColumns = ["id"]
     )
     @ColumnInfo(name = "studentId")
