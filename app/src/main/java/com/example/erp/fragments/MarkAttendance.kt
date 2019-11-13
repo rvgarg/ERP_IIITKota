@@ -28,7 +28,7 @@ class MarkAttendance : Fragment() {
         recycler.layoutManager = layoutManager
         doAsync {
             val erp = ErpViewModel(activity!!.application)
-            students = erp.getStudents()
+            students = ArrayList(erp.getStudents())
             onComplete {
                 val adapter = MarkAttendanceAdapter(context, students)
                 recycler.adapter = adapter

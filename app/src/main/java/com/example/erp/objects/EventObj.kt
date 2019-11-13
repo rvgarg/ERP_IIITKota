@@ -28,5 +28,5 @@ class EventObj(
 ) {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    val id: Int = 0
+    var id: Int = 0
 }

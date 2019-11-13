@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.doAsync
 
@@ -85,6 +86,15 @@ class MainActivity : AppCompatActivity() {
             lg_img.setImageResource(R.drawable.student)
             choice.visibility = View.GONE
             mainLayout.visibility = View.VISIBLE
+        }
+    }
+
+    override fun onBackPressed() {
+        if (mainLayout.isVisible) {
+            choice.visibility = View.VISIBLE
+            mainLayout.visibility = View.GONE
+        } else {
+            super.onBackPressed()
         }
     }
 }

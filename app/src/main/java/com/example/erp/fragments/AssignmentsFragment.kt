@@ -29,7 +29,7 @@ class AssignmentsFragment(val year: Int, val batch: String) : Fragment() {
         recycler.layoutManager = layoutManager
         doAsync {
             val erp = ErpViewModel(activity!!.application)
-            assignments = erp.getAssignments(year, batch)
+            assignments = ArrayList(erp.getAssignments(year, batch))
             onComplete {
                 val adapter = AssignmentsAdapter(activity!!.applicationContext, assignments)
                 recycler.adapter = adapter

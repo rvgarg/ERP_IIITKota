@@ -29,7 +29,7 @@ class EventsFragment : Fragment() {
         recycler.layoutManager = layoutManager
         doAsync {
             val erp = ErpViewModel(activity!!.application)
-            events = erp.getEvents()
+            events = ArrayList(erp.getEvents())
             onComplete {
                 val adapter = EventsAdapter(context, events)
                 recycler.adapter = adapter

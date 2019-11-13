@@ -29,7 +29,7 @@ class ProfessorsFragment : Fragment() {
         recycler.layoutManager = layoutManager
         doAsync {
             val erp = ErpViewModel(activity!!.application)
-            professors = erp.getTeachers()
+            professors = ArrayList(erp.getTeachers())
             onComplete {
                 val adapter = ProfessorAdapter(context, professors)
                 recycler.adapter = adapter

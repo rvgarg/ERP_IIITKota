@@ -29,7 +29,7 @@ class AnnouncementsFragment : Fragment() {
         recycler.layoutManager = layoutManager
         doAsync {
             val erp = ErpViewModel(activity!!.application)
-            announcements = erp.getAnnouncements()
+            announcements = ArrayList(erp.getAnnouncements())
             onComplete {
                 val adapter = AnnouncementsAdapter(context = context, ann = announcements)
                 recycler.adapter = adapter

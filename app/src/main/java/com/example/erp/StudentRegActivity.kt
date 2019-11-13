@@ -20,11 +20,10 @@ class StudentRegActivity : AppCompatActivity() {
             val Email = email.text.toString()
             val Password = password.text.toString()
             val ConfPass = cnfPassword.text.toString()
-            val Number = number.text.toString().toLong()
-            val Year = year.text.toString().toInt()
+
             val Branch = branch.text.toString()
             val Batch = batch.text.toString()
-            val Age = age.text.toString().toInt()
+
             var ready = true
             var pReady = true
             if (TextUtils.isEmpty(Name)) {
@@ -77,6 +76,9 @@ class StudentRegActivity : AppCompatActivity() {
                 }
             }
             if (ready) {
+                val Age = age.text.toString().toInt()
+                val Number = number.text.toString().toLong()
+                val Year = year.text.toString().toInt()
                 val student = Student(
                     studentId = Id,
                     name = Name,
